@@ -1,0 +1,20 @@
+packages:
+  "recharts": "For dashboard charts and analytics visualization"
+  "date-fns": "For formatting expense dates and approval timelines"
+  "react-hook-form": "For robust form state management"
+  "@hookform/resolvers": "For Zod schema validation in forms"
+  "framer-motion": "For page transitions and interactive micro-animations"
+  "clsx": "For conditional class name joining"
+  "tailwind-merge": "For merging Tailwind CSS classes safely"
+
+images:
+  - path: "artifacts/reimbursement-app/public/images/auth-bg.png"
+    description: "Abstract modern geometric background with deep blue and white corporate branding, conveying trust and finance"
+    aspect_ratio: "16:9"
+  - path: "artifacts/reimbursement-app/public/images/logo.png"
+    description: "Minimalist modern app logo featuring a stylized 'R' in deep blue for a finance and reimbursement app, solid white background"
+    aspect_ratio: "1:1"
+
+notes:
+  - Using manual fetch wrappers in hooks to ensure Authorization Bearer token is correctly passed to the backend.
+  - Relying on @workspace/api-client-react/src/generated/api.schemas for type definitions.

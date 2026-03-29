@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Reimbursement Management"
+version = "1.0.0"
+id = "artifacts/reimbursement-app"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23333
+
+[services.development]
+run = "pnpm --filter @workspace/reimbursement-app run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/reimbursement-app", "run", "build" ]
+publicDir = "artifacts/reimbursement-app/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23333"
+BASE_PATH = "/"
